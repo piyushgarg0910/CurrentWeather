@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/WeatherFragmentLayout"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:background="@color/translucent"
+        android:id="@+id/currently">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="@string/currently"
+            android:id="@+id/current_weather"
+            android:textSize="24sp"/>
+
+        <ImageView
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:layout_below="@id/current_weather"
+            android:id="@+id/current_icon"
+            android:contentDescription="@string/currently"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/current_icon"
+            android:layout_alignTop="@id/current_icon"
+            android:text="@string/temperature"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:id="@+id/current_weather_temp"
+            android:textSize="28sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/current_icon"
+            android:layout_below="@id/current_weather_temp"
+            android:layout_marginTop="16dp"
+            android:text="@string/real_feel"
+            android:layout_marginStart="32dp"
+            android:id="@+id/current_weather_real_feel"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/date_and_time"
+            android:layout_toEndOf="@id/current_icon"
+            android:layout_below="@id/current_weather_real_feel"
+            android:layout_marginTop="16dp"
+            android:id="@+id/current_weather_date"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="8dp"
+            android:textSize="12sp"/>
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/refresh_button"
+            android:src="@drawable/ic_refresh"
+            android:id="@+id/RefreshButton"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:id="@+id/Hourly_weather"
+        android:layout_below="@id/currently"
+        android:layout_marginTop="16dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:text="@string/hourly"
+        android:background="@color/translucent"
+        android:textStyle="bold"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="16sp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:id="@+id/hourly_recycler_view"
+        android:layout_below="@id/Hourly_weather"
+        android:background="@color/transparent"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Daily_weather"
+        android:text="@string/daily"
+        android:layout_below="@id/hourly_recycler_view"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:textStyle="bold"
+        android:background="@color/translucent"
+        android:gravity="center"
+        android:paddingBottom="6dp"
+        android:paddingTop="6dp"
+        android:textSize="16sp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/daily_recycler_view"
+        android:layout_below="@id/Daily_weather"
+        android:background="@color/transparent"/>
+
+</RelativeLayout>

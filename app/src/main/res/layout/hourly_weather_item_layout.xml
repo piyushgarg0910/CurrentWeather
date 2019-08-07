@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="128dp"
+    android:background="@color/translucent"
+    android:layout_marginEnd="6dp"
+    android:id="@+id/hourly_item_view"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="8dp"
+        android:id="@+id/hourly_weather_date"
+        android:text="@string/missing_data"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/hourly_weather_date"
+        android:layout_marginTop="8dp"
+        android:id="@+id/hourly_weather_day"
+        android:text="@string/missing_data"
+        android:textSize="16sp"/>
+
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/hourly_weather_day"
+        android:layout_marginTop="8dp"
+        android:id="@+id/hourly_weather_icon"
+        android:contentDescription="@string/hourly_image"
+        android:src="@drawable/weather_error"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/hourly_weather_icon"
+        android:layout_marginTop="8dp"
+        android:id="@+id/hourly_weather_temp"
+        android:text="@string/missing_data"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+</RelativeLayout>
